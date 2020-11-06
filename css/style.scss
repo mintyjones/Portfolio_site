@@ -1,0 +1,172 @@
+$primary-color: #c9ada7;
+$secondary-color: #f2e9e4;
+$tertiary-color: #9a8c98;
+$main-font: "Dosis";
+
+$break-sml: 640px;
+$break-mid: 1007px;
+
+@mixin bar-setup {
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px;
+  align-items: center;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: $secondary-color;
+  margin: 0;
+}
+
+header,
+footer {
+  @include bar-setup;
+}
+
+header h1 {
+    margin: 0;
+    font-family: $main-font;
+    font-size: 3rem;
+    padding: 0 0 0 40px;
+}
+
+nav {
+  margin: 0;
+  ul {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-inline-start: 0px;
+    a {
+      text-decoration: none;
+      color: #fff;
+      li {
+        margin: 0px 5px;
+        font-family: $main-font;
+        list-style-type: none;
+        background-color: #4a4e69;
+        padding: 1em 1.5em;
+        border-radius: 20px;
+        &:hover {
+          background-color: $tertiary-color;
+          > a {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#left_sec, #right_sec {
+    width: 50%;
+}
+
+#left_sec {
+    padding: 70px 70px 70px 60px;
+}
+
+#right_sec {
+    padding: 0 20px 0 40px;
+    border-left: 2px solid #000;
+}
+#left_sec img {
+    width: 100%; 
+    max-width: 385px;
+}
+
+footer {
+    margin-bottom: 20px;
+}
+
+.mob_nav img {
+    width: 30px;
+  }
+
+#socials a {
+    margin: 10px;
+}
+
+
+
+// media query for smaller screens
+
+@media screen and (max-width: $break-sml) {
+  header {
+    justify-content: center;
+    flex-direction: column;
+  }
+  header h1 {
+    padding: 0 0 20px 0;
+  }
+  .full_nav {
+    display: none;
+  }
+  nav ul {
+    justify-content: center;
+    padding: 0;
+  }
+  nav ul a li {
+    margin: 5px;
+    padding: 0.8em 0.8em;
+    border-radius: 10px;
+  }
+  main article {
+      flex-direction: column;
+  }
+
+  #socials img {
+      width: 30px;
+    }
+
+  #left_sec {
+      width:40%;
+      padding: 20px;
+  }
+  #right_sec {
+      width: 75%;
+    border-left: 0px solid #000;
+    border-top: 1px solid #000;
+  }
+  footer {
+    padding: 10px 40px;
+  }
+}
+
+main article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+// media query for mid size screens
+
+@media screen and (min-width: $break-sml) and (max-width: $break-mid) {
+  .mob_nav {
+    display: none;
+  }
+  #socials img {
+    width: 50px;
+  }
+}
+
+// media query for large size screens
+
+@media screen and (min-width: $break-mid) {
+  .mob_nav {
+    display: none;
+  }
+  body {
+    width: 85%;
+    margin: 0 auto;
+  }
+  #socials img {
+    width: 50px;
+  }
+}
