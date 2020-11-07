@@ -40,8 +40,8 @@ nav ul a li {
   font-family: "Dosis";
   list-style-type: none;
   background-color: #4a4e69;
-  padding: 1em 1.5em;
-  border-radius: 20px;
+  padding: 0.5em 0.7em;
+  border-radius: 10px;
 }
 nav ul a li:hover {
   background-color: #9a8c98;
@@ -59,6 +59,10 @@ nav ul a li:hover > a {
   padding: 70px 70px 70px 60px;
 }
 
+#aboutme #left_sec {
+  border: 0px;
+}
+
 #right_sec {
   padding: 0 20px 0 40px;
   border-left: 2px solid #000;
@@ -67,6 +71,25 @@ nav ul a li:hover > a {
 #left_sec img {
   width: 100%;
   max-width: 385px;
+}
+
+#logo_flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#right_sec img {
+  width: 100px;
+}
+
+#logo_flex img {
+  width: 100px;
+}
+
+#sml_comps img {
+  width: 100%;
 }
 
 footer {
@@ -82,14 +105,14 @@ footer {
 }
 
 .sml_logo {
-  width: 116px;
+  width: 86px;
   position: absolute;
   left: 60px;
 }
 
 .inner_page h1 {
-  margin: 0 0 0 130px;
-  font-size: 2.5em;
+  margin: 0 0 0 90px;
+  font-size: 2.1em;
 }
 
 #blog_list {
@@ -97,7 +120,7 @@ footer {
 }
 
 #blog_list section {
-  margin: 20px 60px;
+  margin: 20px 50px;
   width: 33%;
 }
 
@@ -119,6 +142,10 @@ input,
 textarea {
   margin: 0 0 20px 0;
   width: 85%;
+}
+
+#mid_sec img {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 640px) {
@@ -159,14 +186,19 @@ textarea {
     padding: 20px;
   }
 
-  #right_sec {
+  #right_sec, #aboutme #left_sec, #aboutme #mid_sec, #aboutme #right_sec {
     width: 75%;
     border-left: 0px solid #000;
     border-top: 1px solid #000;
   }
 
+  #aboutme #mid_sec {
+    padding-bottom: 20px;
+  }
+
   footer {
     padding: 10px 40px;
+    flex-direction: column;
   }
 
   #blog_list section {
@@ -208,7 +240,27 @@ main article {
   }
 
   .sml_logo {
-    top: 7px;
+    top: 22px;
+  }
+
+  #aboutme {
+    align-items: flex-start;
+  }
+
+  #logo_flex {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  #aboutme #left_sec, #aboutme #mid_sec, #aboutme #right_sec {
+    width: 33%;
+    margin: 0 20px;
+    padding: 0 20px;
+    border-left: 1px solid #000;
   }
 }
 @media screen and (min-width: 1007px) {
@@ -228,6 +280,26 @@ main article {
   .sml_logo {
     left: 139px;
     top: 6px;
+  }
+
+  #aboutme {
+    align-items: flex-start;
+  }
+
+  #logo_flex {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  #aboutme #left_sec, #aboutme #mid_sec, #aboutme #right_sec {
+    width: 33%;
+    margin: 0 20px;
+    padding: 0 20px;
+    border-left: 1px solid #000;
   }
 }
 
