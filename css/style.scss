@@ -124,6 +124,20 @@ footer {
   width: 100%;
 }
 
+// contact page specific styling
+
+label,
+input,
+textarea {
+  display: block;
+}
+
+input,
+textarea {
+  margin: 0 0 20px 0;
+  width: 85%;
+}
+
 // media query for smaller screens
 
 @media screen and (max-width: $break-sml) {
@@ -178,13 +192,18 @@ footer {
     p {
       text-align: justify;
     }
+
+    // contact page styling for small screens
   }
 
+  form {
+    margin-top: 60px;
+  }
   .sml_logo {
     display: none;
   }
   .inner_page h1 {
-      margin:0;
+    margin: 0;
   }
 }
 
@@ -203,8 +222,8 @@ main article {
   #socials img {
     width: 50px;
   }
-  .sml_logo{
-      top:7px;
+  .sml_logo {
+    top: 7px;
   }
 }
 

@@ -109,6 +109,18 @@ footer {
   width: 100%;
 }
 
+label,
+input,
+textarea {
+  display: block;
+}
+
+input,
+textarea {
+  margin: 0 0 20px 0;
+  width: 85%;
+}
+
 @media screen and (max-width: 640px) {
   header {
     justify-content: center;
@@ -166,6 +178,10 @@ footer {
   }
   #blog_list section p {
     text-align: justify;
+  }
+
+  form {
+    margin-top: 60px;
   }
 
   .sml_logo {
