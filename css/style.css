@@ -34,6 +34,7 @@ p {
 
 hr {
   margin: 20px 0;
+  width: 100%;
 }
 
 button {
@@ -89,6 +90,10 @@ nav ul a li:hover {
 }
 nav ul a li:hover > a {
   color: #000;
+}
+
+.current_page {
+  background-color: #9a8c98;
 }
 
 #left_sec,
@@ -173,7 +178,20 @@ footer {
 }
 
 #blog_list span {
+  margin: 0px 5px;
+  font-family: "Dosis";
+  list-style-type: none;
+  background-color: #4a4e69;
+  padding: 0.5em 0.7em;
+  border-radius: 10px;
+  margin: 0;
   align-self: flex-end;
+}
+#blog_list span a {
+  color: #f2e9e4;
+}
+#blog_list span a:hover {
+  color: #9a8c98;
 }
 
 #blog_list img {
@@ -294,7 +312,7 @@ main article {
   }
 
   .sml_logo {
-    top: 61px;
+    top: 8px;
   }
 
   #aboutme {

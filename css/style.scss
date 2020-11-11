@@ -8,6 +8,15 @@ $second-font: "Oleo Script", cursive;
 $break-sml: 640px;
 $break-mid: 1007px;
 
+@mixin button-style {
+  margin: 0px 5px;
+  font-family: $head-font;
+  list-style-type: none;
+  background-color: #4a4e69;
+  padding: 0.5em 0.7em;
+  border-radius: 10px;
+}
+
 @mixin bar-setup {
   background-color: $primary-color;
   display: flex;
@@ -47,18 +56,19 @@ p {
 }
 
 hr {
-    margin: 20px 0;
+  margin: 20px 0;
+  width: 100%;
 }
 
 button {
-    background-color: #4a4e69;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 2rem;
-    font-family: $head-font;
-    letter-spacing: 2px;
-  }
+  background-color: #4a4e69;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 2rem;
+  font-family: $head-font;
+  letter-spacing: 2px;
+}
 
 .button {
   display: block;
@@ -74,7 +84,7 @@ button {
 }
 
 article a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 nav {
@@ -88,12 +98,7 @@ nav {
       text-decoration: none;
       color: #fff;
       li {
-        margin: 0px 5px;
-        font-family: $head-font;
-        list-style-type: none;
-        background-color: #4a4e69;
-        padding: 0.5em 0.7em;
-        border-radius: 10px;
+        @include button-style;
         &:hover {
           background-color: $tertiary-color;
           > a {
@@ -103,6 +108,10 @@ nav {
       }
     }
   }
+}
+
+.current_page {
+    background-color: $tertiary-color;
 }
 
 #left_sec,
@@ -143,14 +152,13 @@ nav {
   }
 }
 
-
 #right_sec img {
   width: 100%;
 }
 
 #logo_flex img {
-    width: 90%;
-    padding: 0 0 5px 20px;
+  width: 90%;
+  padding: 0 0 5px 20px;
 }
 
 #sml_comps img {
@@ -194,7 +202,15 @@ footer {
 }
 
 #blog_list span {
+  @include button-style;
+  margin: 0;
   align-self: flex-end;
+  a {
+    color: $secondary-color;
+    &:hover {
+        color: $tertiary-color;
+    }
+  }
 }
 
 #blog_list img {
@@ -217,7 +233,6 @@ textarea {
 
 // about page specific images
 
-
 // media query for smaller screens
 
 @media screen and (max-width: $break-sml) {
@@ -229,7 +244,7 @@ textarea {
     padding: 0 0 20px 0;
   }
   h2 {
-      text-align: center;
+    text-align: center;
   }
   .full_nav {
     display: none;
@@ -315,7 +330,7 @@ main article {
     width: 50px;
   }
   .sml_logo {
-    top: 61px;
+    top: 8px;
   }
 
   #aboutme {
