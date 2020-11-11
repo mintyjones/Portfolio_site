@@ -22,6 +22,43 @@ header h1 {
   padding: 0 0 0 40px;
 }
 
+h2 {
+  font-family: "Oleo Script", cursive;
+  font-size: 3.5rem;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+}
+
+button {
+  background-color: #4a4e69;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Dosis";
+  letter-spacing: 2px;
+}
+
+.button {
+  display: block;
+  margin: 40px auto;
+  width: 340px;
+  height: 80px;
+  cursor: pointer;
+  transition: box-shadow 0.1s linear;
+}
+.button:hover {
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: #22223b;
+}
+
+article a {
+  text-decoration: none;
+}
+
 nav {
   margin: 0;
 }
@@ -75,7 +112,7 @@ nav ul a li:hover > a {
 
 #logo_flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -85,7 +122,8 @@ nav ul a li:hover > a {
 }
 
 #logo_flex img {
-  width: 100px;
+  width: 90%;
+  padding: 0 0 20px 30px;
 }
 
 #sml_comps img {
@@ -94,6 +132,7 @@ nav ul a li:hover > a {
 
 footer {
   margin-bottom: 20px;
+  font-family: "Dosis";
 }
 
 .mob_nav img {
@@ -186,7 +225,13 @@ textarea {
     padding: 20px;
   }
 
-  #right_sec, #aboutme #left_sec, #aboutme #mid_sec, #aboutme #right_sec {
+  #aboutme #left_sec {
+    width: 75%;
+  }
+
+  #right_sec,
+#aboutme #mid_sec,
+#aboutme #right_sec {
     width: 75%;
     border-left: 0px solid #000;
     border-top: 1px solid #000;
@@ -256,7 +301,9 @@ main article {
     align-content: space-between;
   }
 
-  #aboutme #left_sec, #aboutme #mid_sec, #aboutme #right_sec {
+  #aboutme #left_sec,
+#aboutme #mid_sec,
+#aboutme #right_sec {
     width: 33%;
     margin: 0 20px;
     padding: 0 20px;
@@ -287,15 +334,16 @@ main article {
   }
 
   #logo_flex {
-    height: calc(100vh - 100px);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-content: space-between;
   }
 
-  #aboutme #left_sec, #aboutme #mid_sec, #aboutme #right_sec {
+  #aboutme #left_sec,
+#aboutme #mid_sec,
+#aboutme #right_sec {
     width: 33%;
     margin: 0 20px;
     padding: 0 20px;

@@ -1,7 +1,9 @@
 $primary-color: #c9ada7;
 $secondary-color: #f2e9e4;
 $tertiary-color: #9a8c98;
-$main-font: "Dosis";
+$head-font: "Dosis";
+$first-font: "Montserrat", sans-serif;
+$second-font: "Oleo Script", cursive;
 
 $break-sml: 640px;
 $break-mid: 1007px;
@@ -29,9 +31,46 @@ footer {
 
 header h1 {
   margin: 0;
-  font-family: $main-font;
+  font-family: $head-font;
   font-size: 3rem;
   padding: 0 0 0 40px;
+}
+
+h2 {
+  font-family: $second-font;
+  font-size: 3.5rem;
+}
+
+p {
+  font-family: $first-font;
+  font-size: 1.5em;
+}
+
+button {
+    background-color: #4a4e69;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 2rem;
+    font-family: $head-font;
+    letter-spacing: 2px;
+  }
+
+.button {
+  display: block;
+  margin: 40px auto;
+  width: 340px;
+  height: 80px;
+  cursor: pointer;
+  transition: box-shadow 0.1s linear;
+  &:hover {
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: #22223b;
+  }
+}
+
+article a {
+    text-decoration: none;
 }
 
 nav {
@@ -46,7 +85,7 @@ nav {
       color: #fff;
       li {
         margin: 0px 5px;
-        font-family: $main-font;
+        font-family: $head-font;
         list-style-type: none;
         background-color: #4a4e69;
         padding: 0.5em 0.7em;
@@ -68,18 +107,14 @@ nav {
 }
 
 #right_sec {
-
 }
-
-
-
 
 #left_sec {
   padding: 70px 70px 70px 60px;
 }
 
 #aboutme #left_sec {
-    border: 0px;
+  border: 0px;
 }
 
 #right_sec {
@@ -92,26 +127,28 @@ nav {
 }
 
 #logo_flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #right_sec img {
-    width: 100px;
+  width: 100px;
 }
 
 #logo_flex img {
-    width: 100px;
+    width: 90%;
+    padding: 0 0 20px 30px;
 }
 
 #sml_comps img {
-    width: 100%;
+  width: 100%;
 }
 
 footer {
   margin-bottom: 20px;
+  font-family: $head-font;
 }
 
 .mob_nav img {
@@ -171,7 +208,7 @@ textarea {
 // about page specific images
 
 #mid_sec img {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 // media query for smaller screens
@@ -208,17 +245,22 @@ textarea {
     width: 40%;
     padding: 20px;
   }
-  #right_sec, #aboutme #left_sec, #aboutme #mid_sec, #aboutme #right_sec,  {
+  #aboutme #left_sec {
+    width: 75%;
+  }
+  #right_sec,
+  #aboutme #mid_sec,
+  #aboutme #right_sec {
     width: 75%;
     border-left: 0px solid #000;
     border-top: 1px solid #000;
   }
   #aboutme #mid_sec {
-      padding-bottom: 20px;
+    padding-bottom: 20px;
   }
   footer {
     padding: 10px 40px;
-    flex-direction:column;
+    flex-direction: column;
   }
 
   //blog list styling for small screens
@@ -265,24 +307,26 @@ main article {
   .sml_logo {
     top: 22px;
   }
-  
-    #aboutme {
-        align-items: flex-start;
-    }
-    #logo_flex {
-        height: calc(100vh - 100px);
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: space-between;
-    }
-    #aboutme #left_sec, #aboutme #mid_sec, #aboutme #right_sec {
-        width: 33%;
-        margin: 0 20px;
-        padding: 0 20px;
-        border-left: 1px solid #000;
-    }
+
+  #aboutme {
+    align-items: flex-start;
+  }
+  #logo_flex {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+  #aboutme #left_sec,
+  #aboutme #mid_sec,
+  #aboutme #right_sec {
+    width: 33%;
+    margin: 0 20px;
+    padding: 0 20px;
+    border-left: 1px solid #000;
+  }
 }
 
 // media query for large size screens
@@ -302,22 +346,24 @@ main article {
     left: 139px;
     top: 6px;
   }
-  
-    #aboutme {
-        align-items: flex-start;
-    }
-    #logo_flex {
-        height: calc(100vh - 100px);
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: space-between;
-    }
-    #aboutme #left_sec, #aboutme #mid_sec, #aboutme #right_sec {
-        width: 33%;
-        margin: 0 20px;
-        padding: 0 20px;
-        border-left: 1px solid #000;
-    }
+
+  #aboutme {
+    align-items: flex-start;
+  }
+  #logo_flex {
+    // height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+  }
+  #aboutme #left_sec,
+  #aboutme #mid_sec,
+  #aboutme #right_sec {
+    width: 33%;
+    margin: 0 20px;
+    padding: 0 20px;
+    border-left: 1px solid #000;
+  }
 }
