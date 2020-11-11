@@ -177,7 +177,7 @@ footer {
   width: 33%;
 }
 
-#blog_list span {
+#blog_list span, .blog span {
   margin: 0px 5px;
   font-family: "Dosis";
   list-style-type: none;
@@ -187,10 +187,10 @@ footer {
   margin: 0;
   align-self: flex-end;
 }
-#blog_list span a {
+#blog_list span a, .blog span a {
   color: #f2e9e4;
 }
-#blog_list span a:hover {
+#blog_list span a:hover, .blog span a:hover {
   color: #9a8c98;
 }
 

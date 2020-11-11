@@ -201,7 +201,7 @@ footer {
   width: 33%;
 }
 
-#blog_list span {
+#blog_list span, .blog span {
   @include button-style;
   margin: 0;
   align-self: flex-end;
