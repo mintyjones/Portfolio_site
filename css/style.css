@@ -198,6 +198,13 @@ footer {
   width: 100%;
 }
 
+.blog {
+  padding: 0 20px;
+}
+.blog img {
+  width: 100%;
+}
+
 label,
 input,
 textarea {
