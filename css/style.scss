@@ -50,7 +50,7 @@ h2 {
   font-size: 2.8rem;
 }
 
-p {
+p, li {
   font-family: $first-font;
   font-size: 1.1em;
 }
@@ -397,4 +397,9 @@ main article {
     padding: 0 0 0 20px;
     border-left: 1px solid #000;
   }
+}
+figcaption {
+    font-family: 'Montserrat';
+    font-size: 0.8em;
+    text-align: center;
 }
