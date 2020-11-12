@@ -61,13 +61,14 @@ hr {
 }
 
 button {
-  background-color: #4a4e69;
+  background-color: #d90429;
   border: none;
   border-radius: 4px;
   color: #fff;
   font-size: 2rem;
-  font-family: $head-font;
   letter-spacing: 2px;
+  transform: rotate(-3deg);
+  cursor: pointer;
 }
 
 .button {
@@ -85,6 +86,10 @@ button {
 
 article a {
   text-decoration: none;
+  color: #000;
+  &:hover {
+      color: $tertiary-color;
+  }
 }
 
 nav {
@@ -402,4 +407,25 @@ figcaption {
     font-family: 'Montserrat';
     font-size: 0.8em;
     text-align: center;
+}
+button, input, select, textarea, label {
+    font-family: $head-font;
+}
+input, textarea {
+    border: 0px;
+    border-bottom: 1px solid #4a4e69;
+    &:focus {
+        background   : rgba(0,0,0,.1);
+        border-radius: 5px;
+    }
+}
+label {
+    margin: 0 0 5px 0;
+}
+form button {
+    padding: 5px 10px;
+    font-size: 100%;
+    &:hover {
+        background-color: #9a8c98;
+    }
 }
