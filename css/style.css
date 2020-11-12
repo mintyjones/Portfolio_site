@@ -419,4 +419,8 @@ form button:hover {
   background-color: #9a8c98;
 }
 
+#blog_list em {
+  font-size: 0.7em;
+}
+
 /*# sourceMappingURL=style.css.map */
