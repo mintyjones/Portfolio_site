@@ -15,6 +15,11 @@ footer {
   align-items: center;
 }
 
+footer {
+  margin-bottom: 20px;
+  font-family: "Dosis";
+}
+
 header h1 {
   margin: 0;
   font-family: "Dosis";
@@ -48,17 +53,41 @@ button {
   cursor: pointer;
 }
 
-.button {
-  display: block;
-  margin: 40px auto;
-  width: 90%;
-  height: 80px;
-  cursor: pointer;
-  transition: box-shadow 0.1s linear;
+main article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.button:hover {
-  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.2);
-  background-color: #22223b;
+
+figcaption {
+  font-family: "Montserrat";
+  font-size: 0.8em;
+  text-align: center;
+}
+
+button, input, select, textarea, label {
+  font-family: "Dosis";
+}
+
+input, textarea {
+  border: 0px;
+  border-bottom: 1px solid #4a4e69;
+}
+input:focus, textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+label {
+  margin: 0 0 5px 0;
+}
+
+form button {
+  padding: 5px 10px;
+  font-size: 100%;
+}
+form button:hover {
+  background-color: #9a8c98;
 }
 
 article a {
@@ -101,6 +130,27 @@ nav ul a li:hover > a {
   background-color: #9a8c98;
 }
 
+.mob_nav img {
+  width: 30px;
+}
+
+#socials a {
+  margin: 10px;
+}
+
+.big_button {
+  display: block;
+  margin: 40px auto;
+  width: 90%;
+  height: 80px;
+  cursor: pointer;
+  transition: box-shadow 0.1s linear;
+}
+.big_button:hover {
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: #22223b;
+}
+
 #left_sec,
 #right_sec {
   width: 50%;
@@ -109,19 +159,27 @@ nav ul a li:hover > a {
 #left_sec {
   padding: 70px 70px 70px 60px;
 }
-
-#aboutme #left_sec {
-  border: 0px;
+#left_sec img {
+  width: 100%;
+  max-width: 385px;
 }
 
 #right_sec {
   padding: 0 20px 0 40px;
   border-left: 2px solid #000;
 }
-
-#left_sec img {
+#right_sec img {
   width: 100%;
-  max-width: 385px;
+}
+
+.sml_logo {
+  width: 110px;
+  position: absolute;
+}
+
+.inner_page h1 {
+  margin: 0 0 0 90px;
+  font-size: 2.1em;
 }
 
 #logo_flex {
@@ -136,11 +194,6 @@ nav ul a li:hover > a {
   font-size: 0.8em;
   text-align: center;
 }
-
-#right_sec img {
-  width: 100%;
-}
-
 #logo_flex img {
   width: 90%;
   height: 90%;
@@ -151,39 +204,14 @@ nav ul a li:hover > a {
   width: 100%;
 }
 
-footer {
-  margin-bottom: 20px;
-  font-family: "Dosis";
-}
-
-.mob_nav img {
-  width: 30px;
-}
-
-#socials a {
-  margin: 10px;
-}
-
-.sml_logo {
-  width: 110px;
-  position: absolute;
-}
-
-.inner_page h1 {
-  margin: 0 0 0 90px;
-  font-size: 2.1em;
-}
-
 #blog_list {
   flex-wrap: wrap;
 }
-
 #blog_list section {
   margin: 20px 50px;
   width: 33%;
 }
-
-#blog_list span, .blog span {
+#blog_list span {
   margin: 0px 5px;
   font-family: "Dosis";
   list-style-type: none;
@@ -193,13 +221,12 @@ footer {
   margin: 0;
   align-self: flex-end;
 }
-#blog_list span a, .blog span a {
+#blog_list span a {
   color: #f2e9e4;
 }
-#blog_list span a:hover, .blog span a:hover {
+#blog_list span a:hover {
   color: #9a8c98;
 }
-
 #blog_list img {
   width: 100%;
 }
@@ -209,6 +236,26 @@ footer {
 }
 .blog img {
   width: 100%;
+}
+.blog span {
+  margin: 0px 5px;
+  font-family: "Dosis";
+  list-style-type: none;
+  background-color: #4a4e69;
+  padding: 0.5em 0.7em;
+  border-radius: 10px;
+  margin: 0;
+  align-self: flex-end;
+}
+.blog span a {
+  color: #f2e9e4;
+}
+.blog span a:hover {
+  color: #9a8c98;
+}
+
+#blog_list em {
+  font-size: 0.7em;
 }
 
 label,
@@ -237,15 +284,10 @@ textarea {
     text-align: center;
   }
 
-  .full_nav {
-    display: none;
-  }
-
   nav ul {
     justify-content: center;
     padding: 0;
   }
-
   nav ul a li {
     margin: 5px;
     padding: 0.8em 0.8em;
@@ -254,6 +296,15 @@ textarea {
 
   main article {
     flex-direction: column;
+  }
+
+  footer {
+    padding: 10px 40px;
+    flex-direction: column;
+  }
+
+  .full_nav {
+    display: none;
   }
 
   #socials img {
@@ -281,11 +332,6 @@ textarea {
     padding-bottom: 20px;
   }
 
-  footer {
-    padding: 10px 40px;
-    flex-direction: column;
-  }
-
   #blog_list section {
     display: flex;
     flex-direction: column;
@@ -309,12 +355,6 @@ textarea {
     margin: 0;
   }
 }
-main article {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 @media screen and (min-width: 640px) and (max-width: 1007px) {
   .mob_nav {
     display: none;
@@ -387,40 +427,6 @@ main article {
     padding: 0 0 0 20px;
     border-left: 1px solid #000;
   }
-}
-figcaption {
-  font-family: "Montserrat";
-  font-size: 0.8em;
-  text-align: center;
-}
-
-button, input, select, textarea, label {
-  font-family: "Dosis";
-}
-
-input, textarea {
-  border: 0px;
-  border-bottom: 1px solid #4a4e69;
-}
-input:focus, textarea:focus {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-label {
-  margin: 0 0 5px 0;
-}
-
-form button {
-  padding: 5px 10px;
-  font-size: 100%;
-}
-form button:hover {
-  background-color: #9a8c98;
-}
-
-#blog_list em {
-  font-size: 0.7em;
 }
 
 /*# sourceMappingURL=style.css.map */

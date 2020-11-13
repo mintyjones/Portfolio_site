@@ -1,3 +1,5 @@
+// variables (colours, fonts and viewport Break-points)
+
 $primary-color: #c9ada7;
 $secondary-color: #f2e9e4;
 $tertiary-color: #9a8c98;
@@ -7,6 +9,8 @@ $second-font: "Questrial", sans-serif;
 
 $break-sml: 640px;
 $break-mid: 1007px;
+
+// mixins
 
 @mixin button-style {
   margin: 0px 5px;
@@ -26,6 +30,20 @@ $break-mid: 1007px;
   align-items: center;
 }
 
+@mixin blog-button-style {
+  @include button-style;
+  margin: 0;
+  align-self: flex-end;
+  a {
+    color: $secondary-color;
+    &:hover {
+        color: $tertiary-color;
+    }
+  }
+}
+
+// base element styling
+
 html,
 body {
   height: 100%;
@@ -36,6 +54,11 @@ body {
 header,
 footer {
   @include bar-setup;
+}
+
+footer {
+  margin-bottom: 20px;
+  font-family: $head-font;
 }
 
 header h1 {
@@ -71,16 +94,36 @@ button {
   cursor: pointer;
 }
 
-.button {
-  display: block;
-  margin: 40px auto;
-  width: 90%;
-  height: 80px;
-  cursor: pointer;
-  transition: box-shadow 0.1s linear;
+main article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+figcaption {
+  font-family: 'Montserrat';
+  font-size: 0.8em;
+  text-align: center;
+}
+button, input, select, textarea, label {
+  font-family: $head-font;
+}
+input, textarea {
+  border: 0px;
+  border-bottom: 1px solid #4a4e69;
+  &:focus {
+      background   : rgba(0,0,0,.1);
+      border-radius: 5px;
+  }
+}
+label {
+  margin: 0 0 5px 0;
+}
+form button {
+  padding: 5px 10px;
+  font-size: 100%;
   &:hover {
-    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.2);
-    background-color: #22223b;
+      background-color: $tertiary-color;
   }
 }
 
@@ -115,65 +158,11 @@ nav {
   }
 }
 
+// class and id related general styling
+
+// navbar styling
 .current_page {
     background-color: $tertiary-color;
-}
-
-#left_sec,
-#right_sec {
-  width: 50%;
-}
-
-#right_sec {
-}
-
-#left_sec {
-  padding: 70px 70px 70px 60px;
-}
-
-#aboutme #left_sec {
-  border: 0px;
-}
-
-#right_sec {
-  padding: 0 20px 0 40px;
-  border-left: 2px solid #000;
-}
-#left_sec img {
-  width: 100%;
-  max-width: 385px;
-}
-
-#logo_flex {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  p {
-    width: 90%;
-    margin: 0 0 30px 20px;
-    font-size: 0.8em;
-    text-align: center;
-  }
-}
-
-#right_sec img {
-  width: 100%;
-}
-
-#logo_flex img {
-  width: 90%;
-  height: 90%;
-  padding: 0 0 5px 20px;
-}
-
-#sml_comps img {
-  width: 100%;
-}
-
-footer {
-  margin-bottom: 20px;
-  font-family: $head-font;
 }
 
 .mob_nav img {
@@ -182,6 +171,42 @@ footer {
 
 #socials a {
   margin: 10px;
+}
+
+.big_button {
+  display: block;
+  margin: 40px auto;
+  width: 90%;
+  height: 80px;
+  cursor: pointer;
+  transition: box-shadow 0.1s linear;
+  &:hover {
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: #22223b;
+  }
+}
+
+// css for main section layouts
+
+#left_sec,
+#right_sec {
+  width: 50%;
+}
+
+#left_sec {
+  padding: 70px 70px 70px 60px;
+  img {
+    width: 100%;
+    max-width: 385px;
+  }
+}
+
+#right_sec {
+  padding: 0 20px 0 40px;
+  border-left: 2px solid #000;
+  img {
+    width: 100%;
+  }
 }
 
 // inner page styling
@@ -196,31 +221,44 @@ footer {
   font-size: 2.1em;
 }
 
+// about page specific styling
+
+#logo_flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  p {
+    width: 90%;
+    margin: 0 0 30px 20px;
+    font-size: 0.8em;
+    text-align: center;
+  }
+  img {
+    width: 90%;
+    height: 90%;
+    padding: 0 0 5px 20px;
+  }
+}
+
+#sml_comps img {
+  width: 100%;
+}
+
 // blog page specific styling
 
 #blog_list {
   flex-wrap: wrap;
-}
-
-#blog_list section {
-  margin: 20px 50px;
-  width: 33%;
-}
-
-#blog_list span, .blog span {
-  @include button-style;
-  margin: 0;
-  align-self: flex-end;
-  a {
-    color: $secondary-color;
-    &:hover {
-        color: $tertiary-color;
-    }
+  section {
+    margin: 20px 50px;
+    width: 33%;
   }
-}
-
-#blog_list img {
-  width: 100%;
+  span {
+    @include blog-button-style();
+  }
+  img {
+    width: 100%;
+  }
 }
 
 .blog {
@@ -228,6 +266,13 @@ footer {
     img {
         width: 100%;
     }
+    span {
+      @include blog-button-style();
+    }
+}
+
+#blog_list em {
+    font-size: 0.7em;
 }
 
 // contact page specific styling
@@ -244,8 +289,6 @@ textarea {
   width: 85%;
 }
 
-// about page specific images
-
 // media query for smaller screens
 
 @media screen and (max-width: $break-sml) {
@@ -259,20 +302,26 @@ textarea {
   h2 {
     text-align: center;
   }
-  .full_nav {
-    display: none;
-  }
   nav ul {
     justify-content: center;
     padding: 0;
+    a li {
+      margin: 5px;
+      padding: 0.8em 0.8em;
+      border-radius: 10px;
+    }
   }
-  nav ul a li {
-    margin: 5px;
-    padding: 0.8em 0.8em;
-    border-radius: 10px;
-  }
+
   main article {
     flex-direction: column;
+  }
+  footer {
+    padding: 10px 40px;
+    flex-direction: column;
+  }
+
+  .full_nav {
+    display: none;
   }
 
   #socials img {
@@ -295,10 +344,6 @@ textarea {
   }
   #aboutme #mid_sec {
     padding-bottom: 20px;
-  }
-  footer {
-    padding: 10px 40px;
-    flex-direction: column;
   }
 
   //blog list styling for small screens
@@ -325,12 +370,6 @@ textarea {
   .inner_page h1 {
     margin: 0;
   }
-}
-
-main article {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 // media query for mid size screens
@@ -387,7 +426,6 @@ main article {
     align-items: flex-start;
   }
   #logo_flex {
-    // height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -402,33 +440,4 @@ main article {
     padding: 0 0 0 20px;
     border-left: 1px solid #000;
   }
-}
-figcaption {
-    font-family: 'Montserrat';
-    font-size: 0.8em;
-    text-align: center;
-}
-button, input, select, textarea, label {
-    font-family: $head-font;
-}
-input, textarea {
-    border: 0px;
-    border-bottom: 1px solid #4a4e69;
-    &:focus {
-        background   : rgba(0,0,0,.1);
-        border-radius: 5px;
-    }
-}
-label {
-    margin: 0 0 5px 0;
-}
-form button {
-    padding: 5px 10px;
-    font-size: 100%;
-    &:hover {
-        background-color: #9a8c98;
-    }
-}
-#blog_list em {
-    font-size: 0.7em;
 }
