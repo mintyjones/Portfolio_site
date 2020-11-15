@@ -11,9 +11,13 @@
     <title>ZeeDesigns</title>
   </head>
   <body>
+    <!-- Header component - the header is styled slight differently on the home page than on inner pages
+    on inner pages, a greaphic appears to the left of the company name -->
     <header>
       <h1>ZEEDESIGNS</h1>
-      <nav>
+      <!-- Site Navigation compnonent
+        At larger size the site nav is a text component, while at mobile sizes it turns into a graphical component  -->
+        <nav>
         <ul>
           <a href="./index.html">
             <li class="full_nav current_page">HOME</li>
@@ -46,6 +50,7 @@
     <!-- Pages are divided using the <main>, <article> and <section> elements -->
     <main>
       <article>
+        <!-- in a couple of pages within the site, the left section houses the logo og my business, big and bold to act as effective and memorbale branding -->
         <section id="left_sec">
           <img src="./imgs/zd_logo.png" alt="ZeeDesigns Logo" />
         </section>
@@ -60,15 +65,15 @@
             My name is Gordon, and you can find out more by simply clicking on
             the button below...
           </p>
-          <a href="./about.html"
-            ><button class="big_button" id="button1">Follow me...</button></a
-          >
+          <!-- This button will appear a few times throughout the site. It could be deemed as a text and graphical component due to design decisions -->
+          <a href="./about.html"><button class="big_button" id="button1">Follow me...</button></a>
         </section>
       </article>
     </main>
     
     <!-- footer contains all social media links, a "back to top" button and copyright info -->
     <footer>
+      <!-- The socials component utilises graphical icons to represent the different link to social media platforms-->
       <section id="socials">
         <a href="https://www.facebook.com/gordon.campbell.3914" target="_blank">
           <img src="./imgs/social_icons/facebook.png" alt="Facebook icon" />

@@ -14,12 +14,15 @@
     <!-- supporting code for the Facebook embed -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0" nonce="yDu4wrji"></script>
+    <!-- Header component - the header is styled slight differently on the home page than on inner pages
+    on inner pages, a greaphic appears to the left of the company name -->
     <header class="inner_page">
         <section>
             <a href="./index.html"><img class="sml_logo" src="./imgs/face.png" alt="Gordon's face" /></a>
           <h1>ZEEDESIGNS</h1>
         </section>
-        <!-- Site Navigation -->
+        <!-- Site Navigation compnonent
+        At larger size the site nav is a text component, while at mobile sizes it turns into a graphical component  -->
         <nav>
             <ul>
               <a href="./index.html">
@@ -53,7 +56,8 @@
     <!-- Pages are divided using the <main>, <article> and <section> elements -->
     <main>
         <article id="aboutme">
-            <section id="left_sec">
+            <!-- in a couple of pages within the site, the left section houses the logo og my business, big and bold to act as effective and memorbale branding -->
+        <section id="left_sec">
                 <h2>Who?</h2>
                 <p>Gordon Ian Campbell. Scotsman, from a tiny town called Gourock.</p>
                 <h2>Why?</h2>
@@ -62,10 +66,12 @@
                 <h2>What?</h2>
                 <p>I've had my own design company, ZeeDesigns, since the year 2000. I started as a Flash animator and then self taught Actionscript 3.0. </p>
                 <p>I went on to attain My Advanced Diploma in Graphic Design and Interactive Multimedia. You are welcome to see my journey - my resume is linked below.</p>
+                <!-- This button will appear a few times throughout the site. It could be deemed as a text and graphical component due to design decisions -->
                 <a href="./docs/Resume_Gordon_Campbell.pdf" download><button class="big_button" id="button1">Resume</button></a>
             </section>
             <section id="mid_sec">
                 <h2>Worked with...</h2>
+                <!-- this area in the middle section uses graphical logos to represents companies worked with -->
                 <div id="logo_flex">
                     <img src="./imgs/logos/microsoft.png" alt="Microsoft Logo">
                     <p>Designed a business social media site - 1 month pure "look and feel" work.</p>
@@ -95,7 +101,8 @@
 
     <!-- footer contains all social media links, a "back to top" button and copyright info -->
     <footer>
-        <section id="socials">
+  <!-- The socials component utilises graphical icons to represent the different link to social media platforms-->
+      <section id="socials">
             <a href="https://www.facebook.com/gordon.campbell.3914" target="_blank">
               <img src="./imgs/social_icons/facebook.png" alt="Facebook icon" />
             </a>
