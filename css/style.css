@@ -136,6 +136,7 @@ nav ul a li:hover > a {
 
 #socials a {
   margin: 10px;
+  text-decoration: none;
 }
 
 .big_button {
