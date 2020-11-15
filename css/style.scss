@@ -31,7 +31,7 @@ $break-mid: 1007px;
 }
 
 @mixin blog-button-style {
-  @include button-style;
+  @include button-style();
   margin: 0;
   align-self: flex-end;
   a {
@@ -39,6 +39,18 @@ $break-mid: 1007px;
     &:hover {
         color: $tertiary-color;
     }
+  }
+}
+
+@mixin image-credit-style {
+  font-size: 0.7em;
+  position: relative;
+  top: -26px;
+  opacity: 60%;
+  border-radius: 0px;
+  background-color: rgba(87, 84, 84, 0.1);
+  a {
+    color: #4a4e69;
   }
 }
 
@@ -53,7 +65,7 @@ body {
 
 header,
 footer {
-  @include bar-setup;
+  @include bar-setup();
 }
 
 footer {
@@ -146,7 +158,7 @@ nav {
       text-decoration: none;
       color: #fff;
       li {
-        @include button-style;
+        @include button-style();
         &:hover {
           background-color: $tertiary-color;
           > a {
@@ -247,6 +259,7 @@ nav {
 
 // blog page specific styling
 
+
 #blog_list {
   flex-wrap: wrap;
   section {
@@ -259,6 +272,9 @@ nav {
   img {
     width: 100%;
   }
+  .image_credit {
+    @include image-credit-style();
+  }
 }
 
 .blog {
@@ -269,11 +285,15 @@ nav {
     span {
       @include blog-button-style();
     }
+    .image_credit {
+      @include image-credit-style();
+    }
 }
 
 #blog_list em {
     font-size: 0.7em;
 }
+
 
 // contact page specific styling
 
