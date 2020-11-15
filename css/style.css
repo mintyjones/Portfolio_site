@@ -126,6 +126,12 @@ nav ul a li:hover > a {
   color: #000;
 }
 
+.dropcap {
+  line-height: 0.8;
+  float: left;
+  font-size: 4.5em;
+}
+
 .current_page {
   background-color: #9a8c98;
 }
@@ -207,10 +213,13 @@ nav ul a li:hover > a {
 
 #blog_list {
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 #blog_list section {
   margin: 20px 50px;
   width: 33%;
+  background-color: #c9ada780;
+  padding: 0 10px;
 }
 #blog_list span {
   margin: 0px 5px;
@@ -315,6 +324,10 @@ textarea {
     margin: 5px;
     padding: 0.8em 0.8em;
     border-radius: 10px;
+  }
+
+  .dropcap {
+    font-size: 2.9em;
   }
 
   main article {
@@ -428,6 +441,10 @@ textarea {
 
   .sml_logo {
     top: 6px;
+  }
+
+  .dropcap {
+    font-size: 5.7em;
   }
 
   #aboutme {

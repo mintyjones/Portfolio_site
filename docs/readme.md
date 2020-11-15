@@ -14,15 +14,15 @@ This portfolio website should deliver information about me which presents me as 
 
 ### **FUNCTIONALITY / FEATURES**
 - Clean and simple site / minimal text and images, concetrated more on deisgn simplicity and consistency
-- Accessibility / 90% pure semantic markup within the HTML
+- Accessibility / 90% pure semantic markup within the HTML keeping in mind accessibility and giving google and other search engines better context when crawling the site
 - Accessibility / When developing the mobile nav, a little research shows that alternatives to the hamburger are starting to be preferred, therefore, utilising simple CSS I used semantic icons for the menu items.
 - High contrast buttons / Drawing the user's eye to these "Call to Action" buttons
 - Muted tones and colours / simple palette and easy on the eye - shades of brown are underrated - only one contrasting colour for making particular items standout
-- styled social platform logos / Again, keeping the design of the site quite muted
+- Styled social platform logos / Again, keeping the design of the site quite muted
 - Responsive design / Built with the "mobile first" approach
 
 ### **SITEMAP**
-![Sitemap](image.jpg)
+![Sitemap](sitemap.jpg)
 
 ### **SCREENSHOTS**
 ![Home Page](image.jpg)
@@ -31,10 +31,10 @@ This portfolio website should deliver information about me which presents me as 
 ![Contact Page](image.jpg)
 
 ### **TARGET AUDIENCE**
-- Prospective emplyers
+- Prospective employers
 - Other IT professionals
-- Aspiring Web Devlopers
-- People that want to look at a clean portfolio
+- Aspiring Web Developers
+- People that enjoy perusing the web
 
 ### **TECH STACK** (e.g. html, css, deployment platform, etc)
 - HTML

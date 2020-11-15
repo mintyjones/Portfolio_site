@@ -170,6 +170,12 @@ nav {
   }
 }
 
+.dropcap {
+  line-height: 0.8;
+  float: left;
+  font-size: 4.5em;
+}
+
 // class and id related general styling
 
 // navbar styling
@@ -263,9 +269,12 @@ nav {
 
 #blog_list {
   flex-wrap: wrap;
+  align-items: flex-start;
   section {
     margin: 20px 50px;
     width: 33%;
+    background-color: #c9ada780;
+    padding: 0 10px;
   }
   span {
     @include blog-button-style();
@@ -332,7 +341,9 @@ textarea {
       border-radius: 10px;
     }
   }
-
+  .dropcap {
+    font-size: 2.9em;
+  }
   main article {
     flex-direction: column;
   }
@@ -442,7 +453,10 @@ textarea {
   .sml_logo {
     top: 6px;
   }
-
+  
+  .dropcap {
+    font-size: 5.7em;
+  }
   #aboutme {
     align-items: flex-start;
   }
